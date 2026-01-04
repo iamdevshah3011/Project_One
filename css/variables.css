@@ -1,0 +1,18 @@
+/* /elevate-ai-project/css/variables.css */
+:root {
+  --primary-color: #4f46e5;      /* Indigo */
+  --bg-color: #ffffff;           /* Light background */
+  --text-color: #333333;         /* Dark text */
+  --accent-color: #10b981;       /* Emerald */
+  --font-family: 'Segoe UI', Tahoma, sans-serif;
+  --border-radius: 6px;
+  --transition-speed: 0.3s;
+}
+
+/* Dark theme overrides */
+html.dark {
+  --bg-color: #111827;           /* Dark background */
+  --text-color: #f9fafb;         /* Light text */
+  --primary-color: #6366f1;
+  --accent-color: #34d399;
+}
