@@ -1,0 +1,90 @@
+/* /elevate-ai-project/css/layout.css */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--bg-color);
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav a {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  transition: color var(--transition-speed);
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+nav button#theme-toggle {
+  font-size: 1.2rem;
+  background: none;
+  color: var(--text-color);
+}
+
+.hero {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: #fff;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.features {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  flex: 1 1 250px;
+  background-color: var(--bg-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.feature-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.analyzer {
+  padding: 3rem 0;
+}
+
+.footer, footer {
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-top: 1px solid #e5e7eb;
+}
