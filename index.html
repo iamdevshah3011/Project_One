@@ -1,305 +1,103 @@
+<!-- /elevate-ai-project/index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElevateAI | Intelligent Resume & Profile Optimization</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css"> 
-    </head>
-<body class="theme-dark">
-
-    <nav class="navbar" id="navbar">
-        <div class="container navbar__container">
-            <a href="#" class="brand">
-                <span class="brand__icon">⚡</span>
-                <span class="brand__text">Elevate<span class="text-accent">AI</span></span>
-            </a>
-            
-            <ul class="nav-links">
-                <li><a href="#features" class="nav-link">Features</a></li>
-                <li><a href="#how-it-works" class="nav-link">How it Works</a></li>
-                <li><a href="#pricing" class="nav-link">Pricing</a></li>
-            </ul>
-
-            <div class="nav-actions">
-                <a href="#" class="btn btn--secondary">Log In</a>
-                <a href="#analyzer" class="btn btn--primary">Analyze Free</a>
-            </div>
-
-            <button class="mobile-toggle" aria-label="Open Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="container hero__container">
-            <div class="hero__content">
-                <div class="badge-pill">
-                    <span class="badge-dot"></span> v2.0 AI Model Now Live
-                </div>
-                <h1 class="hero__title">
-                    Beat the <span class="text-gradient">ATS Algorithms</span> in 6 Seconds.
-                </h1>
-                <p class="hero__subtitle">
-                    Our proprietary AI engine parses your resume and LinkedIn profile just like a Fortune 500 recruiter. Get an instant score, keyword gap analysis, and bullet point rewrites.
-                </p>
-                <div class="hero__cta-group">
-                    <a href="#analyzer" class="btn btn--primary btn--lg">
-                        Optimize My Profile
-                        <svg class="icon-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
-                    <a href="#demo" class="btn btn--outline btn--lg">View Sample Report</a>
-                </div>
-                <div class="social-proof">
-                    <span>Trusted by candidates at:</span>
-                    <div class="logos">
-                        <span class="logo-text">Google</span>
-                        <span class="logo-text">Amazon</span>
-                        <span class="logo-text">Tesla</span>
-                        <span class="logo-text">Netflix</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__visual">
-                <div class="interface-mockup">
-                    <div class="mockup-header">
-                        <div class="dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <div class="address-bar">elevate.ai/analysis/result</div>
-                    </div>
-                    <div class="mockup-body">
-                        <div class="score-ring">
-                            <svg viewBox="0 0 36 36" class="circular-chart orange">
-                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                <path class="circle" stroke-dasharray="85, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                            </svg>
-                            <span class="score-text">85</span>
-                        </div>
-                        <div class="mockup-lines">
-                            <div class="line w-70"></div>
-                            <div class="line w-90"></div>
-                            <div class="line w-50"></div>
-                            <div class="line w-80 accent"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="glow-effect"></div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section id="analyzer" class="analyzer-section">
-            <div class="container">
-                <div class="analyzer-card">
-                    <div class="analyzer-tabs">
-                        <button class="tab-btn active" data-target="resume">Resume PDF</button>
-                        <button class="tab-btn" data-target="linkedin">LinkedIn URL</button>
-                        <button class="tab-btn" data-target="text">Paste Text</button>
-                    </div>
-
-                   <div class="analyzer-body">
-    <div id="upload-stage" class="upload-zone">
-        <div class="input-header">
-            <h3>Optimize Your Profile</h3>
-            <p class="text-muted">Paste your Resume Summary or LinkedIn "About" section below.</p>
-        </div>
-        
-        <textarea id="manual-text" class="text-area-input" placeholder="Example: Software Engineer with 3 years of experience in Java..."></textarea>
-        
-        <div class="action-row">
-            <input type="file" id="resume-upload" class="file-input" hidden>
-            <button class="btn btn--secondary btn--sm" onclick="document.getElementById('resume-upload').click()">
-                📂 Upload File (PDF/Doc)
-            </button>
-            <button id="analyze-btn" class="btn btn--primary btn--md">
-                🚀 Analyze Now
-            </button>
-        </div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ElevateAI – AI Resume Analyzer</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">ElevateAI</h1>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#features">Features</a>
+        <a href="#analyzer">Analyzer</a>
+        <button id="theme-toggle" aria-label="Toggle dark/light theme">🌙</button>
+      </nav>
     </div>
+  </header>
 
-    <div id="loading-stage" class="loading-zone hidden">
-        <div class="scanner-animation">
-            <div class="scan-line"></div>
-            <div class="document-icon"></div>
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <h2>Elevate Your Resume</h2>
+        <p>Use AI to analyze and improve your resume. Get instant feedback on your skills match.</p>
+        <a href="#analyzer" class="btn-primary">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Features</h2>
+        <div class="feature-list">
+          <div class="feature-item">
+            <img src="assets/ai-icon.svg" alt="AI Icon" />
+            <h3>AI Keyword Extraction</h3>
+            <p>Identify important keywords and skills in seconds.</p>
+          </div>
+          <div class="feature-item">
+            <img src="assets/score-icon.svg" alt="Score Icon" />
+            <h3>ATS Scoring</h3>
+            <p>Get an estimated Applicant Tracking System (ATS) score for your resume.</p>
+          </div>
+          <div class="feature-item">
+            <img src="assets/theme-icon.svg" alt="Theme Icon" />
+            <h3>Custom Themes</h3>
+            <p>Dark/light mode toggle with persistent settings.</p>
+          </div>
         </div>
-        <h3 class="loading-text">Analyzing Keywords...</h3>
-        <div class="progress-bar-wrapper">
-            <div class="progress-bar" id="ai-progress"></div>
-        </div>
+      </div>
+    </section>
+
+    <!-- Resume Analyzer Section -->
+    <section id="analyzer" class="analyzer">
+      <div class="container">
+        <h2>Resume Analyzer</h2>
+        <form id="resumeForm">
+          <div class="form-group">
+            <label for="resumeFile">Upload Resume (PDF):</label>
+            <input type="file" id="resumeFile" name="resumeFile" accept=".pdf">
+          </div>
+          <div class="form-group">
+            <label for="resumeText">Or Paste Resume Text:</label>
+            <textarea id="resumeText" name="resumeText" rows="6" placeholder="Paste your resume text here..."></textarea>
+          </div>
+          <button type="submit" id="analyzeBtn" class="btn-secondary">Analyze Resume</button>
+          <div id="loader" class="loader hidden" aria-hidden="true"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Analysis Result Modal -->
+  <div id="resultModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button" aria-label="Close">&times;</span>
+      <h3>Analysis Results</h3>
+      <p>Your resume match score: <strong><span id="scoreValue">0</span>%</strong></p>
+      <progress id="scoreBar" max="100" value="0"></progress>
+      <h4>Keywords Found:</h4>
+      <ul id="keywordsList"></ul>
     </div>
+  </div>
 
-    <div id="results-stage" class="results-dashboard hidden">
-         <div class="dashboard-header">
-            <div class="score-card">
-                <div class="score-circle" id="final-score-circle" style="--percent: 0">
-                    <span class="number" id="final-score">0</span>
-                    <span class="label">Score</span>
-                </div>
-            </div>
-            <div class="quick-stats">
-                <div class="stat-item">
-                    <span class="stat-val" id="word-count">0</span>
-                    <span class="stat-label">Words</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-val" id="impact-verbs">0</span>
-                    <span class="stat-label">Power Verbs</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-val" id="cliches-found">0</span>
-                    <span class="stat-label">Issues</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="dashboard-grid">
-            <div class="result-card">
-                <h4>⚠️ Missing Keywords</h4>
-                <div class="tag-cloud" id="missing-keywords"></div>
-            </div>
-            <div class="result-card">
-                <h4>💡 Smart Feedback</h4>
-                <div class="rewrite-box">
-                    <p id="ai-rewrite-text" class="typewriter-text"></p>
-                </div>
-            </div>
-        </div>
-        <button class="btn btn--outline btn--full mt-4" onclick="location.reload()">Start New Analysis</button>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ElevateAI. All rights reserved.</p>
     </div>
-</div>
-                        <div id="loading-stage" class="loading-zone hidden">
-                            <div class="scanner-animation">
-                                <div class="scan-line"></div>
-                                <div class="document-icon"></div>
-                            </div>
-                            <h3 class="loading-text">Parsing Logic...</h3>
-                            <div class="progress-bar-wrapper">
-                                <div class="progress-bar" id="ai-progress"></div>
-                            </div>
-                            <div class="loading-steps">
-                                <span class="step" id="step-1">Extracting keywords...</span>
-                                <span class="step" id="step-2">Benchmarking against industry standards...</span>
-                                <span class="step" id="step-3">Generating rewritten bullets...</span>
-                            </div>
-                        </div>
+  </footer>
 
-                        <div id="results-stage" class="results-dashboard hidden">
-                            <div class="dashboard-header">
-                                <div class="score-card">
-                                    <div class="score-circle" id="final-score-circle" style="--percent: 0">
-                                        <span class="number" id="final-score">0</span>
-                                        <span class="label">ATS Score</span>
-                                    </div>
-                                </div>
-                                <div class="quick-stats">
-                                    <div class="stat-item">
-                                        <span class="stat-val" id="word-count">0</span>
-                                        <span class="stat-label">Words</span>
-                                    </div>
-                                    <div class="stat-item">
-                                        <span class="stat-val" id="impact-verbs">0</span>
-                                        <span class="stat-label">Power Verbs</span>
-                                    </div>
-                                    <div class="stat-item">
-                                        <span class="stat-val error" id="cliches-found">0</span>
-                                        <span class="stat-label">Clichés</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="dashboard-grid">
-                                <div class="result-card">
-                                    <h4>🚫 Missing Keywords</h4>
-                                    <p class="card-desc">Recruiters in your sector usually look for these:</p>
-                                    <div class="tag-cloud" id="missing-keywords">
-                                        </div>
-                                </div>
-
-                                <div class="result-card">
-                                    <h4>✨ AI Recruiter Rewrite</h4>
-                                    <p class="card-desc">We improved your summary for better impact:</p>
-                                    <div class="rewrite-box">
-                                        <div class="rewrite-header">
-                                            <span class="badge badge--success">Optimized</span>
-                                        </div>
-                                        <p id="ai-rewrite-text" class="typewriter-text"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <button class="btn btn--primary btn--full mt-4" onclick="location.reload()">Upload Another</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="features" class="section section--dark">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Engineered for <span class="text-accent">Success</span></h2>
-                    <p>Stop guessing what recruiters want. Let the data decide.</p>
-                </div>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🔍</div>
-                        <h3>Deep Semantic Parsing</h3>
-                        <p>We don't just match keywords. We analyze the context of your achievements to ensure they land with impact.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📊</div>
-                        <h3>Live Scoring</h3>
-                        <p>Get a quantifiable score from 0-100 based on readability, impact, and ATS compatibility.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">✍️</div>
-                        <h3>Generative Rewrites</h3>
-                        <p>Our LLM suggests stronger, active-voice alternatives to your passive bullet points instantly.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer__container">
-            <div class="footer__col">
-                <a href="#" class="brand">Elevate<span class="text-accent">AI</span></a>
-                <p>Building the future of career acceleration tools.</p>
-            </div>
-            <div class="footer__col">
-                <h4>Product</h4>
-                <a href="#">Resume Scanner</a>
-                <a href="#">LinkedIn Optimizer</a>
-                <a href="#">Cover Letter Gen</a>
-            </div>
-            <div class="footer__col">
-                <h4>Company</h4>
-                <a href="#">About</a>
-                <a href="#">Careers</a>
-                <a href="#">Blog</a>
-            </div>
-            <div class="footer__col">
-                <h4>Legal</h4>
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-            </div>
-        </div>
-        <div class="footer__bottom">
-            <p>&copy; 2024 ElevateAI Inc. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="js/app.js"></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/ai-engine.js" defer></script>
 </body>
 </html>
