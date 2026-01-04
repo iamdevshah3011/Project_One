@@ -107,23 +107,76 @@
                         <button class="tab-btn" data-target="text">Paste Text</button>
                     </div>
 
-                    <div class="analyzer-body">
-                        <div id="upload-stage" class="upload-zone">
-                            <input type="file" id="resume-upload" class="file-input" accept=".pdf,.docx,.txt" hidden>
-                            <div class="upload-icon-wrapper">
-                                <svg class="upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                            </div>
-                            <h3>Drop your resume here</h3>
-                            <p>Support for PDF, DOCX (Max 5MB)</p>
-                            <button class="btn btn--secondary btn--sm" onclick="document.getElementById('resume-upload').click()">Browse Files</button>
-                            
-                            <div class="divider"><span>OR</span></div>
-                            
-                            <textarea id="manual-text" class="text-area-input" placeholder="Paste your resume summary or work experience here for instant analysis..."></textarea>
-                            
-                            <button id="analyze-btn" class="btn btn--primary btn--full mt-4">Run AI Analysis</button>
-                        </div>
+                   <div class="analyzer-body">
+    <div id="upload-stage" class="upload-zone">
+        <div class="input-header">
+            <h3>Optimize Your Profile</h3>
+            <p class="text-muted">Paste your Resume Summary or LinkedIn "About" section below.</p>
+        </div>
+        
+        <textarea id="manual-text" class="text-area-input" placeholder="Example: Software Engineer with 3 years of experience in Java..."></textarea>
+        
+        <div class="action-row">
+            <input type="file" id="resume-upload" class="file-input" hidden>
+            <button class="btn btn--secondary btn--sm" onclick="document.getElementById('resume-upload').click()">
+                📂 Upload File (PDF/Doc)
+            </button>
+            <button id="analyze-btn" class="btn btn--primary btn--md">
+                🚀 Analyze Now
+            </button>
+        </div>
+    </div>
 
+    <div id="loading-stage" class="loading-zone hidden">
+        <div class="scanner-animation">
+            <div class="scan-line"></div>
+            <div class="document-icon"></div>
+        </div>
+        <h3 class="loading-text">Analyzing Keywords...</h3>
+        <div class="progress-bar-wrapper">
+            <div class="progress-bar" id="ai-progress"></div>
+        </div>
+    </div>
+
+    <div id="results-stage" class="results-dashboard hidden">
+         <div class="dashboard-header">
+            <div class="score-card">
+                <div class="score-circle" id="final-score-circle" style="--percent: 0">
+                    <span class="number" id="final-score">0</span>
+                    <span class="label">Score</span>
+                </div>
+            </div>
+            <div class="quick-stats">
+                <div class="stat-item">
+                    <span class="stat-val" id="word-count">0</span>
+                    <span class="stat-label">Words</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val" id="impact-verbs">0</span>
+                    <span class="stat-label">Power Verbs</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val" id="cliches-found">0</span>
+                    <span class="stat-label">Issues</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="result-card">
+                <h4>⚠️ Missing Keywords</h4>
+                <div class="tag-cloud" id="missing-keywords"></div>
+            </div>
+            <div class="result-card">
+                <h4>💡 Smart Feedback</h4>
+                <div class="rewrite-box">
+                    <p id="ai-rewrite-text" class="typewriter-text"></p>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn--outline btn--full mt-4" onclick="location.reload()">Start New Analysis</button>
+    </div>
+</div>
                         <div id="loading-stage" class="loading-zone hidden">
                             <div class="scanner-animation">
                                 <div class="scan-line"></div>
