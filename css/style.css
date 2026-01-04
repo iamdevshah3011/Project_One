@@ -522,3 +522,42 @@ ul { list-style: none; }
     .bar { display: block; width: 25px; height: 3px; background: white; margin: 5px auto; }
     .dashboard-header, .dashboard-grid { grid-template-columns: 1fr; }
 }
+/* Toast Notification (Professional Feedback) */
+.toast-msg {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--surface-bg);
+    border: 1px solid var(--primary);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 9999;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Tighter, cleaner input area */
+.input-header { margin-bottom: 1rem; }
+.text-muted { color: var(--text-muted); font-size: 0.9rem; }
+
+.action-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/* Make text area look like code editor */
+.text-area-input {
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    background: #0f172a; /* Darker than surface */
+    border: 1px solid #334155;
+}
